@@ -1,0 +1,25 @@
+Download any version from here 
+	http://zookeeper.apache.org/releases.html
+extract the zip file 
+
+cd to the extracted folder 
+
+then setup config file 
+	gedit conf/zoo/cfg
+	
+	#type the following in the text editor
+		tickTime=2000
+		dataDir=/var/lib/zookeeper
+		clientPort=2181
+
+Thats all now we start the service 
+	bin/zkServer.sh start
+	
+its done and set 
+	
+now to know more open the cli of zookeeper(port u gave in the cfg file)
+	bin/zkCli.sh -server 127.0.0.1:2181
+		
+	type 
+		help 
+	and play with all different settings  
